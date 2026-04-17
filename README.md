@@ -46,6 +46,8 @@
 - [notes/04-下界の基礎.md](notes/04-下界の基礎.md): 下界とは何か、なぜ必要か、instance-dependent と minimax の違いを基礎から整理したノートです。
 - [notes/05-KLとchange-of-measure.md](notes/05-KLとchange-of-measure.md): KL ダイバージェンスと change-of-measure を使って、なぜ $\log T / \mathrm{KL}$ 型の下界が出るのかを見るノートです。
 - [notes/06-下界の演習問題.md](notes/06-下界の演習問題.md): 下界の読み方と証明の流れを自分で確認するための演習問題です。
+- [notes/07-Lai-Robbins-厳密証明.md](notes/07-Lai-Robbins-厳密証明.md): Bernoulli bandit における Lai-Robbins 型下界を、uniformly good algorithm の仮定の下で厳密に証明するノートです。
+- [notes/08-minimax-下界-厳密証明.md](notes/08-minimax-下界-厳密証明.md): Bernoulli 環境族を使って minimax $\Omega(\sqrt{KT})$ 下界を厳密に証明するノートです。
 
 ## おすすめの読み方
 
@@ -53,7 +55,8 @@
 2. そのあと [templates/UCB1-リグレット解析テンプレ.md](templates/UCB1-リグレット解析テンプレ.md) と [notes/03-演習問題.md](notes/03-演習問題.md) で自分で再現する
 3. 次に下界編として [notes/04-下界の基礎.md](notes/04-下界の基礎.md) を読んで、下界が何を主張するのかを掴む
 4. 続いて [notes/05-KLとchange-of-measure.md](notes/05-KLとchange-of-measure.md) で、なぜ KL が出るのかを追う
-5. 最後に [notes/06-下界の演習問題.md](notes/06-下界の演習問題.md) で整理する
+5. そのあと [notes/07-Lai-Robbins-厳密証明.md](notes/07-Lai-Robbins-厳密証明.md) と [notes/08-minimax-下界-厳密証明.md](notes/08-minimax-下界-厳密証明.md) で厳密証明を読む
+6. 最後に [notes/06-下界の演習問題.md](notes/06-下界の演習問題.md) で整理する
 
 ## 数式表示について
 
@@ -80,12 +83,12 @@ https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-f
 - UCB1 の標準的な gap-dependent 上界を証明する
 - 下界の基本用語と典型的な結論を理解する
 - KL に基づく下界の証明パターンの入口を掴む
+- Bernoulli bandit の Lai-Robbins 型下界を厳密に証明する
+- minimax $\Omega(\sqrt{KT})$ 下界を厳密に証明する
 - テンプレートを使って同型の解析を書き直す
 
 逆に、つぎの話題はまだ未整理です。
 
-- Lai-Robbins 下界の完全な厳密証明
 - minimax 型の gap-free 上界
-- minimax 下界の完全証明
 - KL-UCB のような非 Hoeffding 型の解析
 - 線形バンディットや contextual bandit への拡張
