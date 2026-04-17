@@ -30,14 +30,14 @@
 ```math
 I_t \in \arg\max_i
 \left[
-\hat{\mu}_i(N_i(t-1)) + \operatorname{rad}(N_i(t-1), t)
+\hat{\mu}_i(N_i(t-1)) + \mathrm{rad}(N_i(t-1), t)
 \right]
 ```
 
 とする。ただし
 
 ```math
-\operatorname{rad}(s,t) = \sqrt{\frac{2 \log t}{s}}.
+\mathrm{rad}(s,t) = \sqrt{\frac{2 \log t}{s}}.
 ```
 
 ## リグレット分解
@@ -68,11 +68,11 @@ R_T
 \exp(-2 s \varepsilon^2).
 ```
 
-$\varepsilon = \operatorname{rad}(s,t) = \sqrt{(2 \log t)/s}$ と置くと
+$\varepsilon = \mathrm{rad}(s,t) = \sqrt{(2 \log t)/s}$ と置くと
 
 ```math
 \mathbb{P}\!\left(
-\hat{\mu}_i(s) - \mu_i \geq \operatorname{rad}(s,t)
+\hat{\mu}_i(s) - \mu_i \geq \mathrm{rad}(s,t)
 \right)
 \leq
 t^{-4}
@@ -80,7 +80,7 @@ t^{-4}
 
 ```math
 \mathbb{P}\!\left(
-\mu_i - \hat{\mu}_i(s) \geq \operatorname{rad}(s,t)
+\mu_i - \hat{\mu}_i(s) \geq \mathrm{rad}(s,t)
 \right)
 \leq
 t^{-4}.
@@ -96,7 +96,7 @@ E_t
 \left\{
 \left| \hat{\mu}_i(s) - \mu_i \right|
 \leq
-\operatorname{rad}(s,t)
+\mathrm{rad}(s,t)
 \right\}.
 ```
 
@@ -135,32 +135,32 @@ m_i := \left\lceil \frac{8 \log T}{\Delta_i^2} \right\rceil
 もし腕 $i$ が選ばれたなら
 
 ```math
-\operatorname{UCB}_i(t) \geq \operatorname{UCB}_{i^*}(t)
+\mathrm{UCB}_i(t) \geq \mathrm{UCB}_{i^*}(t)
 ```
 
 です。
 $E_t$ の下で
 
 ```math
-\operatorname{UCB}_i(t)
+\mathrm{UCB}_i(t)
 \leq
-\mu_i + 2 \operatorname{rad}(N_i(t-1), t)
+\mu_i + 2 \mathrm{rad}(N_i(t-1), t)
 ```
 
 ```math
-\operatorname{UCB}_{i^*}(t) \geq \mu^*
+\mathrm{UCB}_{i^*}(t) \geq \mu^*
 ```
 
 なので
 
 ```math
-\mu_i + 2 \operatorname{rad}(N_i(t-1), t) \geq \mu^*
+\mu_i + 2 \mathrm{rad}(N_i(t-1), t) \geq \mu^*
 ```
 
 すなわち
 
 ```math
-2 \operatorname{rad}(N_i(t-1), t) \geq \Delta_i
+2 \mathrm{rad}(N_i(t-1), t) \geq \Delta_i
 ```
 
 が必要です。
@@ -168,7 +168,7 @@ $E_t$ の下で
 一方、$N_i(t-1) \geq m_i$ かつ $t \leq T$ なら
 
 ```math
-2 \operatorname{rad}(N_i(t-1), t)
+2 \mathrm{rad}(N_i(t-1), t)
 \leq
 2 \sqrt{\frac{2 \log T}{m_i}}
 \leq
@@ -214,7 +214,7 @@ R_T
 
 ## このテンプレを流用するときに差し替える場所
 
-- 信頼半径 $\operatorname{rad}(s,t)$ の定義
+- 信頼半径 $\mathrm{rad}(s,t)$ の定義
 - 使用する集中不等式
 - 良い事象の確率上界 $\mathbb{P}(E_t^c)$
 - 閾値 $m_i$ の定数
